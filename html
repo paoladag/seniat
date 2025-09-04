@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Organigrama SENIAT - Nivel Normativo</title>
+<style>
+  /* Fuente similar a la del PDF */
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: #fff;
+    margin: 20px;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  .organigrama {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  .nivel {
+    font-weight: 700;
+    font-size: 1.4rem;
+    color: #0d3b66; /* Azul oscuro similar a PDF */
+    border-bottom: 4px solid #0d3b66;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+  }
+
+  .ambito {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #144d8c; /* Azul algo menos oscuro */
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 4px solid #0d3b66;
+  }
+
+  .caja {
+    border: 2px solid #0d3b66;
+    border-radius: 8px;
+    background: #e6f0fb;
+    padding: 18px 24px;
+    margin: 10px auto 20px auto;
+    max-width: 850px;
+    line-height: 1.4em;
+    box-shadow: 2px 2px 6px #a1b8db88;
+    position: relative;
+  }
+
+  ul {
+    margin: 8px 0 0 24px;
+    padding-left: 18px;
+    color: #212121;
+    font-weight: 500;
+    font-size: 1rem;
+    list-style-type: disc;
+  }
+
+  ul li {
+    margin-bottom: 7px;
+  }
+
+  .subtitulo {
+    font-weight: 600;
+    margin-top: 20px;
+    color: #0d3b66;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    padding-right: 20px;
+  }
+
+  .subtitulo::after {
+    content: "▼";
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0.9rem;
+    line-height: 1.3rem;
+    transition: transform 0.3s ease;
+  }
+
+  .subtitulo.collapsed::after {
+    transform: rotate(-90deg);
+  }
+
+  .detalle {
+    margin-left: 18px;
+    margin-top: 6px;
+  }
+
+  /* Línea lateral vertical (jerarquía visual) */
+  .organigrama::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #0d3b66;
+    border-radius: 2px;
+    opacity: 0.3;
+  }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    .caja {
+      max-width: 95%;
+      padding: 12px 16px;
+      font-size: 0.9rem;
+    }
+    .nivel {
+      font-size: 1.1rem;
+    }
+    .ambito {
+      font-size: 1rem;
+    }
+    ul {
+      font-size: 0.9rem;
+      margin-left: 20px;
+      padding-left: 16px;
+    }
+  }
+
+</style>
+</head>
+<body>
+  <div class="organigrama" style="position:relative;">
+
+    <div class="nivel">NIVEL NORMATIVO</div>
+
+    <div class="ambito">Ámbito estratégico</div>
+
+    <div class="caja">
+      <strong>Superintendencia Nacional Aduanera y Tributaria</strong>, se encuentra el <strong>Superintendente Nacional del SENIAT</strong>. De él emanan:
+
+      <div class="subtitulo collapsed" tabindex="0" role="button" aria-expanded="false">Directorio Ejecutivo:</div>
+      <ul class="detalle" style="display:none;">
+        <li>Superintendente del SENIAT.</li>
+        <li>Representante y suplente designado por el <strong>Ministro de Finanzas Públicas</strong>.</li>
+        <li>Representante y suplente designado por el <strong>Ministro de Industria y Comercio</strong>.</li>
+        <li>2 miembros directivos del nivel normativo designados por el Superintendente.</li>
+      </ul>
+
+      <div class="subtitulo collapsed" tabindex="0" role="button" aria-expanded="false">Comité Asesor de Dirección y Planificación:</div>
+      <ul class="detalle" style="display:none;">
+        <li>Superintendente del SENIAT.</li>
+        <li>Gerentes Generales.</li>
+        <li>Director de la Oficina de Planificación.</li>
+        <li>Dependiendo del área objeto de estudio se integrarán a las sesiones de dicho comité los correspondientes: Gerentes de Línea, Directores de Oficina, Directores Zonales, Gerentes Regionales y/o Gerentes de Aduanas Principales.</li>
+      </ul>
+
+      <div class="subtitulo collapsed" tabindex="0" role="button" aria-expanded="false">Comité Asesor de Contratación, Presupuesto y Fondo de Gestión:</div>
+      <ul class="detalle" style="display:none;">
+        <li>Superintendente del SENIAT.</li>
+        <li>Gerentes Generales.</li>
+        <li>Dependiendo del área objeto de estudio se integrarán a las sesiones de dicho comité los correspondientes: Gerentes de Línea, Directores de Oficina, Directores Zonales, Gerentes Regionales y/o Gerentes de Aduanas Principales.</li>
+      </ul>
+
+      <div class="subtitulo collapsed" tabindex="0" role="button" aria-expanded="false">Consejo Asesor para la Interpretación de las Normas:</div>
+      <ul class="detalle" style="display:none;">
+        <li>Sujetos nombrados por el <strong>Ministro de Finanzas</strong>, previa autorización del <strong>Presidente de la República</strong>.</li>
+      </ul>
+    </div>
+
+    <div class="nivel" style="margin-top:40px;">NIVEL OPERATIVO</div>
+
+  </div>
+
+  <script>
+    // Script para togglear detalle al clic (acordeón simple)
+    document.querySelectorAll('.subtitulo').forEach(function(titulo) {
+      titulo.addEventListener('click', function() {
+        const expanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !expanded);
+        this.classList.toggle('collapsed');
+        const detalle = this.nextElementSibling;
+        if (detalle.style.display === 'none') {
+          detalle.style.display = 'block';
+        } else {
+          detalle.style.display = 'none';
+        }
+      });
+
+      // También abrir con tecla Enter o Space
+      titulo.addEventListener('keydown', function(e){
+        if(e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
